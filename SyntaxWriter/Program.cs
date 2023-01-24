@@ -33,76 +33,7 @@ namespace SyntaxWriter
                 }
             };
 
-            //            const string dummySrc =
-            //@"
-            //            using System;
-            //            using System.Collections;
-            //            using System.Linq;
-            //            using System.Text;
-
-            //            namespace HelloWorld
-            //            {
-            //                class Program
-            //                {
-            //                    static void Main(string[] args)
-            //                    {
-            //                        var x = 0;
-            //                        var y = 0;
-            //                        var z = 0.0;
-            //                        var zz = (z += 3) == 5.6;
-            //                        double? nz = null;
-
-            //                        var a = x - y == z;
-            //                        var b = x != y;
-            //                        var c = x > y;
-            //                        var d = x < y;
-            //                        var e = x >= y;
-            //                        var f = x <= y;
-            //                        var g = x + y == z;
-            //                        var h = (double) x == y + z;
-            //                        var i = x + y + z == 0;
-            //                        var j = 0.4 == x + y + z;
-            //                        var k = x + y + z == x + y + z;
-            //                        var l = --y == z++;
-            //                        var m = x++ == --z;
-            //                        var n = -x == --z;
-            //                        var o = ++z == --z;
-            //                        var p = Math.Abs(0.0 - 4.5) == --z;
-            //                        var q = nz < 3;
-            //                    }
-            //                }
-            //            }";
-
-            //            var syntaxTree = CSharpSyntaxTree.ParseText(dummySrc);
-
-            //            var root = (CompilationUnitSyntax)syntaxTree.GetRoot();
-            //            var compilation = CSharpCompilation.Create("HelloWorld")
-            //                .AddReferences(MetadataReference.CreateFromFile(typeof(object).Assembly.Location))
-            //                .AddSyntaxTrees(syntaxTree);
-
-            //            syntaxTree.GetRoot()
-            //                .DescendantNodes()
-            //                .OfType<BinaryExpressionSyntax>()
-            //                .ToList()
-            //                .ForEach(expression =>
-            //                {
-            //                    Console.WriteLine(expression);
-            //                    var semanticModel = compilation.GetSemanticModel(expression.SyntaxTree);
-            //                    Console.WriteLine(semanticModel.GetTypeInfo(expression.Left).Type.Name);
-            //                });
-
-
-            //var syntaxRewriter = new FloatingPointComparisonsRewriter(null);
-
-            //var newRoot = syntaxRewriter.Visit(syntaxTree.GetRoot());
-            //var newSyntaxTree = syntaxTree.WithRootAndOptions(newRoot, syntaxTree.Options);
-
-            //Console.WriteLine(syntaxTree);
-            //Console.WriteLine(newSyntaxTree);
-
-            //newSyntaxTree.GetRoot().WriteTo(newSyntaxTree.FilePath);
-
-            ParseSolution(workspace, surround: true);
+            ParseSolution(workspace, surround: false);
 
             Console.WriteLine("Done");
 
