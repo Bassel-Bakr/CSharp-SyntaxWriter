@@ -47,8 +47,7 @@ namespace SyntaxWriter
                 new ProgressBarProjectLoadStatus()).Result;
 
             var compilations = solution.Projects
-                .Select(project => project.GetCompilationAsync().Result)
-                .Skip(2);
+                .Select(project => project.GetCompilationAsync().Result);
 
             compilations.ToList().ForEach(compilation =>
             {
