@@ -101,8 +101,8 @@ namespace SyntaxWriter
             { SyntaxKind.NotEqualsExpression, "NotEquals" } ,
             { SyntaxKind.GreaterThanExpression, "GreaterThan" } ,
             { SyntaxKind.LessThanExpression, "LessThan" } ,
-            { SyntaxKind.GreaterThanOrEqualExpression, "GreaterThanOrEqual" } ,
-            { SyntaxKind.LessThanOrEqualExpression, "LessThanOrEqual" } ,
+            { SyntaxKind.GreaterThanOrEqualExpression, "GreaterThanOrEquals" } ,
+            { SyntaxKind.LessThanOrEqualExpression, "LessThanOrEquals" } ,
         };
 
         private Dictionary<SyntaxKind, string> SWAPPED_CONDITIONALS = new Dictionary<SyntaxKind, string>
@@ -111,8 +111,8 @@ namespace SyntaxWriter
             { SyntaxKind.NotEqualsExpression, "NotEquals" },
             { SyntaxKind.GreaterThanExpression, "LessThan" },
             { SyntaxKind.LessThanExpression, "GreaterThan" },
-            { SyntaxKind.GreaterThanOrEqualExpression, "LessThanOrEqual" },
-            { SyntaxKind.LessThanOrEqualExpression, "GreaterThanOrEqual" },
+            { SyntaxKind.GreaterThanOrEqualExpression, "LessThanOrEquals" },
+            { SyntaxKind.LessThanOrEqualExpression, "GreaterThanOrEquals" },
         };
 
         private static Type[] FLOATING_POINT_TYPES = { typeof(double), typeof(decimal), typeof(float) };
